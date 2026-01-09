@@ -1,31 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vault - Gizlilik Politikası</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gizlilik Politikası – Vault</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #111826;
+      --text: #e6eaf0;
+      --muted: #aab3c0;
+      --accent: #d4af37;
+      --border: rgba(255, 255, 255, 0.08);
+      --link: #8ab4ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: linear-gradient(180deg, var(--bg), #070a0f);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 16px 56px;
+    }
+    header {
+      padding: 24px 20px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(17,24,38,0.9), rgba(17,24,38,0.65));
+      border-radius: 16px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      letter-spacing: 0.2px;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    main {
+      margin-top: 18px;
+      padding: 22px 20px;
+      border: 1px solid var(--border);
+      background: rgba(17,24,38,0.55);
+      border-radius: 16px;
+    }
+    h2 {
+      margin: 22px 0 8px;
+      font-size: 18px;
+      letter-spacing: 0.2px;
+    }
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 15px;
+      color: var(--text);
+    }
+    p { margin: 10px 0; }
+    ul {
+      margin: 8px 0 8px 18px;
+      padding: 0;
+    }
+    li { margin: 6px 0; }
+    .note {
+      border-left: 3px solid var(--accent);
+      padding: 10px 12px;
+      margin: 12px 0;
+      background: rgba(212,175,55,0.08);
+      border-radius: 10px;
+      color: var(--muted);
+    }
+    a { color: var(--link); }
+    footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: left;
+      padding: 0 4px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-left: 8px;
+    }
+    code {
+      background: rgba(255,255,255,0.06);
+      padding: 1px 6px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
-<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; padding: 24px; line-height: 1.6;">
-  <h1>Gizlilik Politikası – Vault</h1>
-  <p>Vault local-first bir kişisel finans uygulamasıdır. Finans verileriniz yalnızca cihazınızda saklanır ve bizimle paylaşılmaz.</p>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Gizlilik Politikası – Vault <span class="badge">Local-first</span></h1>
+      <p class="subtitle">Son güncelleme: <span id="lastUpdated">2026-01-10</span></p>
+    </header>
 
-  <h2>Veri Toplama</h2>
-  <ul>
-    <li>Finans kayıtları cihazınızda saklanır.</li>
-    <li>Varsayılan olarak kullanım analitiği ve hata raporları kapalıdır.</li>
-    <li>Kullanıcı açarsa anonim kullanım metrikleri ve hata logları iyileştirme amacıyla gönderilebilir.</li>
-  </ul>
+    <main>
+      <p>
+        <strong>Vault</strong>, local-first yaklaşımıyla çalışan kişisel finans uygulamasıdır.
+        Portföyünüz ve işlem kayıtlarınız <strong>yalnızca cihazınızda saklanır</strong>; bu finans verileri Vault tarafından
+        <strong>sunucuya yüklenmez</strong> ve <strong>üçüncü taraflarla paylaşılmaz</strong>.
+      </p>
 
-  <h2>Üçüncü Taraf Servisler</h2>
-  <ul>
-    <li>Google Firebase Analytics (opsiyonel)</li>
-    <li>Google Firebase Crash Reporting (opsiyonel)</li>
-  </ul>
+      <h2>1) Toplanan Veriler</h2>
 
-  <h2>Kullanıcı Kontrolü</h2>
-  <p>Kullanıcılar Ayarlar ekranından kullanım verilerini ve hata raporlarını istediği zaman açıp kapatabilir.</p>
+      <h3>a) Finans Verileri (işlemler, etiketler, hedefler, portföy)</h3>
+      <ul>
+        <li>Altın işlemleri, etiketler, hedefler ve portföy bilgileriniz <strong>cihazınızda</strong> saklanır.</li>
+        <li>Bu finans verileri Vault tarafından <strong>toplanmaz</strong>, uzaktaki bir sunucuya <strong>gönderilmez</strong>.</li>
+      </ul>
 
-  <h2>İletişim</h2>
-  <p>Sorular için: <strong>alperen.kavgaci@hotmail.com</strong></p>
+      <h3>b) Kullanım Verileri (Analitik) – Opsiyonel</h3>
+      <ul>
+        <li>
+          Uygulamayı nasıl kullandığınıza dair <strong>anonim kullanım metrikleri</strong>
+          (ör. hangi ekranların daha çok kullanıldığı, belirli özelliklerin kullanım sayısı)
+          <strong>yalnızca uygulamayı geliştirmek</strong> amacıyla toplanabilir.
+        </li>
+        <li><strong>Varsayılan olarak açıktır.</strong> İsterseniz kapatabilirsiniz.</li>
+      </ul>
+
+      <h3>c) Hata Raporları (Crash / Hata Logları) – Opsiyonel</h3>
+      <ul>
+        <li>
+          Uygulama çökerse veya kritik bir hata oluşursa, sorunu teşhis etmek için
+          <strong>hata raporları</strong> ve cihaz/uygulama bilgileri
+          (ör. işletim sistemi sürümü, uygulama sürümü) gönderilebilir.
+        </li>
+        <li>Bu raporlar, uygulamanın kararlılığını artırmak için kullanılır.</li>
+        <li><strong>Varsayılan olarak açıktır.</strong> İsterseniz kapatabilirsiniz.</li>
+      </ul>
+
+      <div class="note">
+        <strong>Not:</strong> Analitik ve hata raporları kapsamında,
+        <strong>işlem detaylarınız / portföy tutarlarınız / etiketleriniz</strong> gibi finans içeriklerinizin
+        gönderilmemesi hedeflenir. (Uygulamada bu ayrımın korunması esastır.)
+      </div>
+
+      <h2>2) Üçüncü Taraf Servisler</h2>
+      <p>Vault, yalnızca kullanıcı tercihine bağlı olarak aşağıdaki servisleri kullanabilir:</p>
+      <ul>
+        <li><strong>Google Firebase Analytics</strong> (kullanım verileri – opsiyonel)</li>
+        <li><strong>Google Firebase Crash Reporting (Crashlytics)</strong> (hata raporları – opsiyonel)</li>
+      </ul>
+      <p>
+        Bu servisler etkinleştirildiğinde, ilgili veriler Google’ın sistemleri üzerinden işlenebilir.
+      </p>
+
+      <h2>3) Kullanıcı Kontrolü</h2>
+      <p>
+        Kullanıcılar aşağıdaki ayarları <strong>Ayarlar &gt; Gizlilik &amp; Veri Güvenliği</strong> bölümünden dilediği zaman değiştirebilir:
+      </p>
+      <ul>
+        <li><strong>Kullanım verilerini paylaş</strong></li>
+        <li><strong>Hata raporlarını paylaş</strong></li>
+      </ul>
+      <p>
+        Bu seçeneklerden herhangi birini kapattığınızda, ilgili veri gönderimi durdurulur.
+      </p>
+
+      <h2>4) İletişim</h2>
+      <p>
+        Sorular için:
+        <a href="mailto:alperen.kavgaci@hotmail.com">alperen.kavgaci@hotmail.com</a>
+      </p>
+    </main>
+
+    <footer>
+      <p>
+        Bu sayfa bilgilendirme amaçlıdır. Uygulama davranışı ve yürürlükteki düzenlemelere göre güncellenebilir.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('lastUpdated').textContent = new Date().toISOString().slice(0,10);
+  </script>
 </body>
 </html>
